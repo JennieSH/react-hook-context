@@ -2,6 +2,10 @@ import { v1 as uuidv1 } from 'uuid';
 
 export const bookReducer = (state, action) => {
     switch (action.type){
+        case "TOGGLE_MODE":
+            return [
+               !state
+            ]
         case "ADD_BOOK":
             return [...state, { 
                 title: action.book.title, 
